@@ -1,0 +1,16 @@
+/* Reset de margem e padding para todos os elementos */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Define o box-sizing para incluir padding e border no tamanho total do elemento */
+}
+
+/* Remove os marcadores das listas */
+ul{
+    list-style: none;
+}
+
+/* Remove a decoração de texto dos links */
+a{
+    text-decoration: none;
+}

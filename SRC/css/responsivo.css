@@ -1,0 +1,42 @@
+/* Aplica estilos quando a largura máxima da tela é 1280px ou menos */
+@media(max-width:1280px){
+    body{
+        padding: 0 40px; /* Define o padding do corpo da página */
+    }
+}
+
+/* Aplica estilos quando a largura máxima da tela é 768px ou menos */
+@media(max-width: 768px){
+    .informacoes{
+        display: flex; /* Altera a exibição para flexbox */
+        flex-direction: column; /* Direção dos itens em coluna */
+        align-items: center; /* Alinha os itens ao centro */
+    }
+    .informacoes .descricao{
+        width: 60%; /* Define a largura da descrição */
+        text-align: center; /* Alinha o texto ao centro */
+    }
+}
+
+/* Aplica estilos quando a largura máxima da tela é 425px ou menos */
+@media(max-width: 425px){
+    .informacoes .logo{
+        max-width: 300px; /* Define a largura máxima do logo */
+    }
+    .menu-lateral{
+        position: static; /* Altera a posição do menu lateral */
+        min-height: auto; /* Altura mínima automática */
+        width: 100%; /* Largura total */
+        margin-top: 50px; /* Define a margem superior */
+    }
+    .menu-lateral ul{
+        flex-direction: row; /* Direção dos itens em linha */
+    }
+    .conteudo{
+        min-height: 70vh; /* Define a altura mínima do conteúdo */
+        gap: 50px; /* Define o espaçamento entre itens */
+    }
+    body{
+        padding: 40px; /* Define o padding do corpo da página */
+    }
+}

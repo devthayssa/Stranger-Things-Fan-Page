@@ -1,0 +1,128 @@
+/* Define a fonte padrão e a largura máxima do corpo da página */
+body {
+    font-family: 'Poppins', sans-serif;
+    max-width: 1280px;
+    margin: 0 auto; /* Centraliza a página */
+}
+
+/* Adiciona um pseudo-elemento 'after' no main para criar um fundo com gradiente */
+main:after {
+    content: '';
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.05926120448179273) 50%, rgba(0, 0, 0, 1) 90%);
+    z-index: -1; /* Coloca o fundo atrás do conteúdo */
+}
+
+/* Estilos para a classe 'conteudo' */
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-evenly; /* Espaço igual entre os itens */
+}
+
+/* Estilos para a logo dentro da classe 'informacoes' */
+.informacoes .logo {
+    max-width: 350px;
+    filter: invert(1); /* Inverte as cores da imagem */
+    margin-bottom: 80px;
+}
+
+/* Estilos para a descrição dentro da classe 'informacoes' */
+.informacoes .descricao {
+    width: 49%;
+    font-size: 24px;
+    color: #ffffff;
+    line-height: 30px;
+}
+
+/* Estilos para os botões do carrossel */
+.botoes-carrossel {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaço entre os botões */
+}
+
+/* Estilos para cada botão do carrossel */
+.botoes-carrossel .botao {
+    background-color: #ffffff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%; /* Torna os botões circulares */
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-color: #ffffff;
+}
+
+/* Estilos para o botão selecionado no carrossel */
+.botoes-carrossel .botao.selecionado {
+    background-color: #cf1c43;
+}
+
+/* Estilos para o menu lateral */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilos para a lista dentro do menu lateral */
+.menu-lateral ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os itens da lista */
+}
+
+/* Estilos para os ícones do menu lateral */
+.menu-lateral .icone {
+    width: 30px;
+    filter: invert(1); /* Inverte as cores do ícone */
+    transition: 0.3s ease-in-out; /* Transição suave */
+}
+
+/* Estilos para os ícones do menu lateral quando estão em hover */
+.menu-lateral .icone:hover {
+    transform: scale(1.2); /* Aumenta o ícone em 20% */
+}
+
+/* Estilos para o carrossel */
+.carrossel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1; /* Coloca o carrossel atrás do conteúdo */
+}
+
+/* Estilos para as imagens do carrossel */
+.carrossel .imagem {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Cobre toda a área disponível */
+    display: none;
+    animation: mudarImagem 0.7s;
+}
+
+/* Exibe a imagem ativa no carrossel */
+.carrossel .imagem.ativa {
+    display: block;
+}
+
+/* Animação para mudança de imagem no carrossel */
+@keyframes mudarImagem {
+    from {
+        opacity: 0.85;
+    }
+    to {
+        opacity: 1;
+    }
+}
